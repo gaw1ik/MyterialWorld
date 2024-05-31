@@ -2,19 +2,14 @@
 // versionNumber = "1.07b";
 // console.log("version ", versionNumber);
 
+
+
 //window.addEventListener('DOMContentLoaded', () => {
 // borderOffProperty = "1px solid rgba(100, 100, 100, 0.0)";
 // borderOnProperty  = "1px solid white";
 
-// pageButtons = document.getElementsByClassName("pageButton");
-// pageContainers = document.getElementsByClassName("pageContainer");
 
-// for(let i=0; i<pageContainers.length; i++) {
-//     pageContainers[i].style.display = "none";
-//     pageButtons[i].style.borderBottom = borderOffProperty;
-// }
-
-// navToggleOn = -1;
+navToggleOn = -1;
 
 
 
@@ -36,22 +31,67 @@ function resize() {
     }
 
     // document.getElementById("menuContainer").style.display = "none";
-    document.getElementById("sidebar").style.display = "none";
+    // document.getElementById("sidebar").style.display = "none";
     // document.getElementById("hamburgerContainer").style.display = "none";
 }
 
 
 
-addEventListener("resize", (event) => {
+window.addEventListener("resize", resize);
 
-    resize();
-});
+
+function openhamburger() {
+    console.log("openhamburger")
+    // hamburgermenu.style.display = "flex";
+
+    // menucurtain.style.display = "flex";
+
+    menucurtain.className = "menucurtainopen";
+    hamburgermenu.className = "hamburgermenuopen";
+
+
+    document.body.style.overflow = "hidden";
+
+    menucurtain.addEventListener('mousedown', closehamburger);
+
+    // document.body.style.opacity = "10%";
+
+}
+
+function closehamburger() { 
+    console.log("closehamburger")
+
+    // menucurtain.style.display = "none";
+    // hamburgermenu.style.display = "none";
+
+    menucurtain.className = "menucurtainclosed";
+    hamburgermenu.className = "hamburgermenuclosed";
+
+
+
+    // hamburger.style.display = "block";
+
+    document.body.style.overflow = "scroll";
+}
 
 
 
 
 window.onload = function () {
-    document.getElementById("pageContainer").style.display = "flex";
+
+    document.getElementById("pageContainer1").style.display = "flex";
+    document.getElementById("pageContainer2").style.display = "flex";
+
+
+    hamburger = document.getElementById("hamburger");
+    hamburgermenu = document.getElementById("hamburgermenu");
+    
+
+    menucurtain = document.getElementById("menucurtain");
+
+
+
+    hamburger.addEventListener('mousedown',openhamburger);
 
     resize();
 }

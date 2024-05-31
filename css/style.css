@@ -25,6 +25,7 @@ body {
 
   margin:auto auto;
   font-family:system-ui;
+  
 }
 
 * {
@@ -38,24 +39,25 @@ p {
   margin: 1rem 0;
   font-size: 1rem;
   text-align: justify;
+  line-height: 1.5;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   /* text-align: center; */
   font-weight: 500;
   margin:0;
   margin-top: 0;
-  margin-bottom: 1.0rem;
+  margin-bottom: 0rem;
   line-height:1;
   color:white;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin:4rem 0 1rem 0;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 
 h3 {
@@ -82,6 +84,9 @@ h5 {
 
 
 img{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
   object-fit: contain;
 }
 
@@ -121,20 +126,76 @@ button :hover {
   margin-left:auto;
 }
 
-.sidebar {
+.hamburgermenuclosed {
   display: flex;
-  position:absolute;
-  right:5%;
-  margin-left:auto;
+  position:fixed;
+  width:100vw;
+  /* height: 0; */
+  /* height: 0vh; */
+  top:-100vh;
   flex-direction: column;
-  align-items:flex-end;
+  align-items:center;
+  background-color:black;
+  opacity:0%;
+  transition: top 0.4s, opacity 1s;
+  /* transition: opacity 1s; */
+  overflow:hidden;
+}
+
+.hamburgermenuopen {
+  display: flex;
+  position:fixed;
+  width:100vw;
+  /* height: 100vh; */
+  top:0;
+  flex-direction: column;
+  align-items:center;
+  background-color:black;
+  opacity:90%;
+  /* transition: height 1s; */
+  transition: top 0.5s, opacity 1s;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  /* transition: height 1s; */
+  /* transition: opacity 1s; */
+}
+
+.hamburgermenulink {
+  font-size: 3rem;
+  margin:1rem auto;
+}
+
+.menucurtainclosed {
+  background-color: black;
+  opacity:0%;
+  width:100vw;
+  height:0;
+  top:100vh;
+  left:0;
+  position:fixed;
+  display:none;
+  align-items: center;
+  
+}
+
+.menucurtainopen {
+  background-color: black;
+  opacity:80%;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+  position:fixed;
+  display:flex;
+  align-items: center;
 }
 
 .menuContainer {
   display: flex;
   margin-left:auto;
-  flex-direction: column;
-  align-items:flex-start;
+  flex-direction: row;
+  gap:1rem;
+  align-items:center;
 }
 
 /* .menuContainer {
@@ -151,7 +212,12 @@ a {
   /* font-size: 1rem; */
   /* margin: 0.5rem 0; */
   text-decoration: none;
-  color:hsl(130,50%,80%);
+  color:hsl(60,50%,80%);
+}
+
+a:active {
+  text-decoration: underline;
+  color:aqua;
 }
 
 .hamburger {
@@ -171,9 +237,9 @@ a {
   display:flex;
   flex-direction: row;
   align-content: center;
-  align-items: flex-start;
-  /* justify-content: center; */
-  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 3rem; */
 }
 
 .titlecontainer {
@@ -189,21 +255,47 @@ a {
  margin-bottom:0;
 }
 
-.pageContainer {
+.pageContainer1 {
+  display:flex;
+  flex-direction: row;
+  /* align-items: start; */
+  align-content: center;
+  justify-content: center;
+  width:60rem;
+  max-width:90%;
+  /* height:100vh; */
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+}
+
+.pageContainer2 {
   display:flex;
   flex-direction: column;
   /* align-items: start; */
   align-content: center;
   /* justify-content: center; */
-  width:40rem;
-  max-width:90%;
+  width:50rem;
+  max-width:97%;
   /* height:100vh; */
   margin-left:auto;
   margin-right:auto;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   margin-bottom: 10rem;
+  /* background-image: url("../images/IMG_8973.jpg"); */
 }
 
+.text1 {
+  margin-left:auto;
+  margin-right:auto;
+  /* margin-top: 5rem; */
+  /* margin-bottom: 10rem; */
+  width:40rem;
+  max-width:90%;
+  text-align:center;
+}
 
 .pageButtonsBar {
   display:flex;
@@ -220,17 +312,19 @@ a {
 .socialbuttonsbar {
   display:flex;
   flex-direction:row;
-  justify-content:flex-start;
+  align-content:center;
+
+  justify-content:center;
   align-items: center;
   /* height: 1rem; */
   /* margin:0 auto; */
-  margin-top:2rem;
-  gap: 2rem;
+  /* margin-top:2rem; */
+  gap: 1rem;
   /* border-top:1px solid white; */
 }
 
 .socialbuttonsbar img {
-  margin: 0;
+  /* margin: 0; */
   height: 3rem;
 }
 
@@ -267,43 +361,6 @@ a {
 
 
 
-
-
-
-
-.image-container {
-  display:flex;
-  /* width:90%;   */
-  height:35vw;
-  align-content: center;
-  padding:2vh 0;
-  border-top:1px solid gray;
-  overflow-x:scroll;
-  /* height:var(--image-height); */
-  overscroll-behavior-inline: contain;
-}
-
-.image-container > img {
-  margin-right:2vh;
-}
-
-
-
-
-
-.fixed_width_img_container {
-  display:flex;
-  width:100%;
-  height:30vh;
-  margin:0;
-}
-
-.fixed_width_img_container > img {
-  object-fit: contain;
-  height:100%;
-  width:auto;
-  margin:0 auto;   
-}
 
 
 
