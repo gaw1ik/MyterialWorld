@@ -186,7 +186,7 @@ button :hover {
 
 .desktopNavBar {
   display: flex;
-  margin-left:auto;
+  /* margin-left:auto; */
   flex-direction: row;
   gap:1rem;
   align-items:center;
