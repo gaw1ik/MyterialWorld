@@ -84,9 +84,9 @@ h5 {
 
 
 img{
-  width:100%;
-  margin-left:auto;
-  margin-right:auto;
+  /* width:100%; */
+  /* margin-left:auto;
+  margin-right:auto; */
   object-fit: contain;
 }
 
@@ -190,7 +190,7 @@ button :hover {
   align-items: center;
 }
 
-.menuContainer {
+.desktopNavBar {
   display: flex;
   margin-left:auto;
   flex-direction: row;
@@ -198,7 +198,7 @@ button :hover {
   align-items:center;
 }
 
-/* .menuContainer {
+/* .desktopNavBar {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   gap: 10px;
@@ -222,8 +222,8 @@ a:active {
 
 .hamburger {
   height:3rem;
-  
-  /* margin-left: 2rem; */
+  /* justify-self:flex-end; */
+  /* margin-left: auto; */
   /* padding: 2rem; */
 }
 
@@ -258,9 +258,9 @@ a:active {
 .pageContainer1 {
   display:flex;
   flex-direction: row;
-  /* align-items: start; */
+  align-items: center;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   width:60rem;
   max-width:90%;
   /* height:100vh; */
@@ -314,7 +314,7 @@ a:active {
   flex-direction:row;
   align-content:center;
 
-  justify-content:center;
+  justify-content:space-evenly;
   align-items: center;
   /* height: 1rem; */
   /* margin:0 auto; */

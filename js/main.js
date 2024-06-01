@@ -21,16 +21,16 @@ function resize() {
 
     if(innerWidth<1100) {
         // console.log(innerWidth,"innerWidth");
-        document.getElementById("menuContainer").style.display = "none";
+        document.getElementById("desktopNavBar").style.display = "none";
         // document.getElementById("sidebar").style.display = "none";
-        document.getElementById("hamburgerContainer").style.display = "flex";
+        document.getElementById("hamburger").style.display = "block";
     } else {
-        document.getElementById("menuContainer").style.display = "flex";
+        document.getElementById("desktopNavBar").style.display = "flex";
         // document.getElementById("sidebar").style.display = "flex";
-        document.getElementById("hamburgerContainer").style.display = "none";
+        document.getElementById("hamburger").style.display = "none";
     }
 
-    // document.getElementById("menuContainer").style.display = "none";
+    // document.getElementById("desktopNavBar").style.display = "none";
     // document.getElementById("sidebar").style.display = "none";
     // document.getElementById("hamburgerContainer").style.display = "none";
 }
