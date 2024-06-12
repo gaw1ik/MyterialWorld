@@ -2,24 +2,17 @@
 
 <html>
 
+  <!-- Generally spekaing, don't touch this stuff.  -->
   <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/style_Mobile.css"> -->
-
     <script src="js/main.js"></script>
-    <!-- <script src="js/utils.js"></script> -->
-
     <title>Myterial World</title>
-
-    
-
-
   </head>
 
+
+  <!-- This is the body. It's where all the content goes! -->
   <body>   
 
     <div class="menucurtainclosed" id="menucurtain"></div>
@@ -31,15 +24,20 @@
         <a class="hamburgermenulink" href="contact.html">Contact</a>
     </div>
 
+
+
+
     <div class="headerContainer" id="headerContainer">
 
-      <img class="hamburger" id="hamburger" src="./icons/hamburgerC1.svg" style="display:none">
+      <div class="menuContainer">
+        <img class="hamburger" id="hamburger" src="./icons/hamburgerC1.svg" style="display:none">
 
-      <div class="desktopNavBar" id="desktopNavBar" style="display:none">
-        <a class="navlink" href="index.html">Home</a>
-        <a class="navlink" href="about.html">About</a>
-        <a class="navlink" href="gallery.html">Gallery</a>
-        <a class="navlink" href="contact.html">Contact</a>
+        <div class="desktopNavBar" id="desktopNavBar">
+          <a class="navlink" href="index.html">Home</a>
+          <a class="navlink" href="about.html">About</a>
+          <a class="navlink" href="gallery.html">Gallery</a>
+          <a class="navlink" href="contact.html">Contact</a>
+        </div>
       </div>
 
       <a href="index.html">
@@ -50,8 +48,8 @@
 
 
 
-
-    <div class="pageContainer2" id="pageContainer2">
+    <!-- This is where all your "stuff" goes. Your photos, your description, your social links, etc. -->
+    <div class="pageContainer1" id="pageContainer1">
 
       <h1>Myterial World</h1>
 
@@ -67,22 +65,19 @@
         </a>
       </div>
 
-      <!-- <div class="spacer"></div> -->
-
       <h2>A hankering for fungi</h2>
 
-      <p class="text1">Samantha Sanders is a Portland-based mushroom cultivator and biomaterials researcher specializing in mycelium. 
+      <!-- Put your text in a <p> (for paragraph) element. -->
+      <p>
+        Samantha Sanders is a Portland-based mushroom cultivator and biomaterials researcher specializing in mycelium. 
         She has been growing her fungal material knowledge and experimentation since 2021 and has been surprised by 
         the seemingly endless possibilities the bio-fabrication space has to offer. 
       </p>
       
-      <!-- <div class="spacer"></div> -->
-
+      <!-- Put your images in a <img> (for image) element. The class="photo" part adds some additional styling rules. -->
       <img class="photo" src="./images/IMG_0514.jpg">
 
-      <!-- <div class="spacer"></div> -->
-
-      <p class="text1">
+      <p>
         Samantha is highly conscientious 
         of the environment, and wants to spread the importance of reducing waste through sharing biodegradable mycelial 
         forms with the world. With an aim to reduce negative stigmas against mushrooms, she hopes that exposing people to 
@@ -91,13 +86,10 @@
         Myterial World opens a window of exploration into the wonders yet to unfold.
       </p>
 
-      <!-- <div class="spacer"></div> -->
-
       <img class="photo" src="./images/IMG_0012.jpg">
 
-      <!-- <div class="spacer"></div> -->
-
-      <p class="text1">Neque ornare aenean euismod elementum nisi quis eleifend. 
+      <p>
+        Neque ornare aenean euismod elementum nisi quis eleifend. 
         Feugiat in ante metus dictum at tempor commodo ullamcorper. 
         Id interdum velit laoreet id donec ultrices. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. 
         Donec et odio pellentesque diam volutpat commodo sed.
@@ -110,10 +102,7 @@
         Eu augue ut lectus arcu bibendum at varius. Sit amet nisl purus in. Maecenas sed enim ut sem.
       </p>
 
-      <!-- <div class="spacer"></div> -->
-
       <img class="photo" src="./images/IMG_5850.jpg">
-
 
     </div>
 
